@@ -27,7 +27,7 @@ pipeline {
         
         stage('k8s deployment') {
             steps {
-                sh "kubectl create deploy testapp --image basillion/testapp"
+                sh "kubectl create deploy testapp --image basillion/testapp --replicas=4"
             }
         }
         stage('Expose deployment') {
