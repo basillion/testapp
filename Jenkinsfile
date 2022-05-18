@@ -27,7 +27,7 @@ pipeline {
         
         stage('k8s deployment') {
             steps {
-                sh "kubectl create deploy testapp --image basillion/testapp --namespace jenkins"
+                sh "kubectl create deploy testapp --image basillion/testapp"
             }
         }
         stage('Expose deployment') {
